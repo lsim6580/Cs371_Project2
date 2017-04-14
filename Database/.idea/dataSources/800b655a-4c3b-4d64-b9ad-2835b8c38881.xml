@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Cs_371@cs-371.cdzwjr1xplmp.us-east-1.rds.amazonaws.com">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="Cs_371">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="innodb"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="tmp"/>
+    <table id="9" parent="2" name="Advertisements"/>
+    <table id="10" parent="2" name="Categories"/>
+    <table id="11" parent="2" name="Moderators"/>
+    <table id="12" parent="2" name="Statuses"/>
+    <table id="13" parent="2" name="Users"/>
+    <column id="14" parent="9" name="advertisementID">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="15" parent="9" name="advertisementTitle">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="9" name="advertisementDetails">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="9" name="advertisementDateTime">
+      <Position>4</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="9" name="price">
+      <Position>5</Position>
+      <DataType>float(10,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="9" name="userID">
+      <Position>6</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="9" name="moderatorID">
+      <Position>7</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="9" name="categoryID">
+      <Position>8</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="9" name="statusID">
+      <Position>9</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="23" parent="9" name="fk_category_advertisement">
+      <ColNames>categoryID</ColNames>
+    </index>
+    <index id="24" parent="9" name="fk_moderator_advertisement">
+      <ColNames>moderatorID</ColNames>
+    </index>
+    <index id="25" parent="9" name="fk_status_advertisement">
+      <ColNames>statusID</ColNames>
+    </index>
+    <index id="26" parent="9" name="fk_user_advertisement">
+      <ColNames>userID</ColNames>
+    </index>
+    <key id="27" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>advertisementID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="28" parent="9" name="fk_user_advertisement">
+      <ColNames>userID</ColNames>
+      <RefSchemaName>Cs_371</RefSchemaName>
+      <RefTableName>Users</RefTableName>
+      <RefColNames>userID</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="29" parent="9" name="fk_moderator_advertisement">
+      <ColNames>moderatorID</ColNames>
+      <RefSchemaName>Cs_371</RefSchemaName>
+      <RefTableName>Moderators</RefTableName>
+      <RefColNames>UserID</RefColNames>
+    </foreign-key>
+    <foreign-key id="30" parent="9" name="fk_category_advertisement">
+      <ColNames>categoryID</ColNames>
+      <RefSchemaName>Cs_371</RefSchemaName>
+      <RefTableName>Categories</RefTableName>
+      <RefColNames>categoryID</RefColNames>
+    </foreign-key>
+    <foreign-key id="31" parent="9" name="fk_status_advertisement">
+      <ColNames>statusID</ColNames>
+      <RefSchemaName>Cs_371</RefSchemaName>
+      <RefTableName>Statuses</RefTableName>
+      <RefColNames>statusID</RefColNames>
+    </foreign-key>
+    <column id="32" parent="10" name="categoryID">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="33" parent="10" name="categoryName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="34" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>categoryID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="11" name="UserID">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="36" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UserID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="37" parent="11" name="fk_moderator_userID">
+      <ColNames>UserID</ColNames>
+      <RefSchemaName>Cs_371</RefSchemaName>
+      <RefTableName>Users</RefTableName>
+      <RefColNames>userID</RefColNames>
+    </foreign-key>
+    <column id="38" parent="12" name="statusID">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="39" parent="12" name="statusName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="40" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>statusID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="13" name="userID">
+      <Position>1</Position>
+      <DataType>smallint(5) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="42" parent="13" name="userFirstName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="13" name="userLastName">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="44" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>userID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
