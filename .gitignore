@@ -9,6 +9,7 @@
 *.ear
 
 Application\src\main\java\DBConnectionInfo.java
+Application\src\main\resources\*
 Application\target\*
 
 Application\.idea\libraries\*
