@@ -27,96 +27,217 @@ public class ModeratorScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Ad_Title_Field = new javax.swing.JTextField();
-        Ad_Title_Label = new javax.swing.JLabel();
-        Ad_Details_Field_Container = new javax.swing.JScrollPane();
-        Ad_Details_Field = new javax.swing.JTextArea();
-        Ad_Details_Label = new javax.swing.JLabel();
-        Ad_Category_ComboBox = new javax.swing.JComboBox<>();
-        Ad_Category_Label = new javax.swing.JLabel();
-        Ad_Price_Field = new javax.swing.JTextField();
-        Ad_Price_Label = new javax.swing.JLabel();
-        Add_Advertisement_Button = new javax.swing.JButton();
+        Moderator_Tab_Container = new javax.swing.JTabbedPane();
+        Moderator_UnclaimedAds_Tab = new javax.swing.JPanel();
+        Moderator_Category_Label = new javax.swing.JLabel();
+        Moderator_Category_ComboBox = new javax.swing.JComboBox<>();
+        Moderator_Period_Label = new javax.swing.JLabel();
+        Moderator_Period_ComboBox = new javax.swing.JComboBox<>();
+        Moderator_SearchString_Label = new javax.swing.JLabel();
+        Moderator_SearchString_Field = new javax.swing.JTextField();
+        Moderator_Search_Button = new javax.swing.JButton();
+        Moderator_ClaimAd_Button = new javax.swing.JButton();
+        Moderator_UnclaimedAdsResults_Container = new javax.swing.JScrollPane();
+        Moderator_UnclaimedAdsResults_Table = new javax.swing.JTable();
+        Moderator_MyAds_Tab = new javax.swing.JPanel();
+        Moderator_Edit_Button = new javax.swing.JButton();
+        Moderator_Delete_Button = new javax.swing.JButton();
+        Moderator_MyAdsResults_Container = new javax.swing.JScrollPane();
+        Moderator_MyAdsResults_Table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Add Advertisement");
+        setTitle("Moderator:");
 
-        Ad_Title_Field.setToolTipText("Enter a title for the advertisement.");
+        Moderator_Tab_Container.setToolTipText("");
+        Moderator_Tab_Container.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Tab_Container.setName("Moderator_Tab_Container"); // NOI18N
 
-        Ad_Title_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Ad_Title_Label.setLabelFor(Ad_Title_Field);
-        Ad_Title_Label.setText("Title:");
+        Moderator_UnclaimedAds_Tab.setToolTipText("");
+        Moderator_UnclaimedAds_Tab.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        Ad_Details_Field.setColumns(20);
-        Ad_Details_Field.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        Ad_Details_Field.setLineWrap(true);
-        Ad_Details_Field.setRows(5);
-        Ad_Details_Field.setToolTipText("Enter details about the item being advertised.");
-        Ad_Details_Field.setWrapStyleWord(true);
-        Ad_Details_Field_Container.setViewportView(Ad_Details_Field);
+        Moderator_Category_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Category_Label.setLabelFor(Moderator_Category_ComboBox);
+        Moderator_Category_Label.setText("Category");
 
-        Ad_Details_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Ad_Details_Label.setLabelFor(Ad_Details_Field);
-        Ad_Details_Label.setText("Details:");
+        Moderator_Category_ComboBox.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Category_ComboBox.setToolTipText("Select an item category to search.");
 
-        Ad_Category_ComboBox.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Period_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Period_Label.setLabelFor(Moderator_Period_ComboBox);
+        Moderator_Period_Label.setText("Period");
 
-        Ad_Category_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Ad_Category_Label.setLabelFor(Ad_Category_ComboBox);
-        Ad_Category_Label.setText("Category:");
+        Moderator_Period_ComboBox.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Period_ComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "This Month", "Last Month", "Last 3 Months", "Last 6 Months", "Last Year", "Any Date" }));
+        Moderator_Period_ComboBox.setToolTipText("Select a timeframe to search within.");
 
-        Ad_Price_Field.setToolTipText("Enter the price for the item being advertised.");
+        Moderator_SearchString_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_SearchString_Label.setLabelFor(Moderator_SearchString_Field);
+        Moderator_SearchString_Label.setText("Title, Description");
 
-        Ad_Price_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Ad_Price_Label.setLabelFor(Ad_Price_Field);
-        Ad_Price_Label.setText("Price:");
+        Moderator_SearchString_Field.setToolTipText("Enter keyword(s) to search for.");
 
-        Add_Advertisement_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Add_Advertisement_Button.setText("Add Advertisement");
+        Moderator_Search_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Search_Button.setText("Search");
+        Moderator_Search_Button.setToolTipText("");
+
+        Moderator_ClaimAd_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_ClaimAd_Button.setText("Claim Ad");
+        Moderator_ClaimAd_Button.setToolTipText("Claim the currently highlighted advertisement to moderate.");
+
+        Moderator_UnclaimedAdsResults_Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Title", "Description", "Price", "Date", "Username"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        Moderator_UnclaimedAdsResults_Table.setColumnSelectionAllowed(true);
+        Moderator_UnclaimedAdsResults_Table.getTableHeader().setReorderingAllowed(false);
+        Moderator_UnclaimedAdsResults_Container.setViewportView(Moderator_UnclaimedAdsResults_Table);
+        Moderator_UnclaimedAdsResults_Table.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
+        javax.swing.GroupLayout Moderator_UnclaimedAds_TabLayout = new javax.swing.GroupLayout(Moderator_UnclaimedAds_Tab);
+        Moderator_UnclaimedAds_Tab.setLayout(Moderator_UnclaimedAds_TabLayout);
+        Moderator_UnclaimedAds_TabLayout.setHorizontalGroup(
+            Moderator_UnclaimedAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Moderator_UnclaimedAds_TabLayout.createSequentialGroup()
+                .addGroup(Moderator_UnclaimedAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Moderator_UnclaimedAds_TabLayout.createSequentialGroup()
+                        .addGroup(Moderator_UnclaimedAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Moderator_UnclaimedAds_TabLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(Moderator_UnclaimedAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Moderator_Category_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Moderator_Category_Label))
+                                .addGap(18, 18, 18)
+                                .addGroup(Moderator_UnclaimedAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Moderator_Period_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Moderator_Period_Label))
+                                .addGap(18, 18, 18)
+                                .addComponent(Moderator_SearchString_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(Moderator_Search_Button))
+                            .addGroup(Moderator_UnclaimedAds_TabLayout.createSequentialGroup()
+                                .addGap(324, 324, 324)
+                                .addComponent(Moderator_SearchString_Label)))
+                        .addGap(0, 15, Short.MAX_VALUE))
+                    .addGroup(Moderator_UnclaimedAds_TabLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Moderator_UnclaimedAdsResults_Container))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Moderator_UnclaimedAds_TabLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Moderator_ClaimAd_Button)))
+                .addContainerGap())
+        );
+        Moderator_UnclaimedAds_TabLayout.setVerticalGroup(
+            Moderator_UnclaimedAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Moderator_UnclaimedAds_TabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Moderator_UnclaimedAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Moderator_Category_Label)
+                    .addComponent(Moderator_Period_Label)
+                    .addComponent(Moderator_SearchString_Label))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Moderator_UnclaimedAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Moderator_Category_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Moderator_Period_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Moderator_SearchString_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Moderator_Search_Button))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Moderator_ClaimAd_Button)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Moderator_UnclaimedAdsResults_Container, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
+        );
+
+        Moderator_Tab_Container.addTab("Unclaimed Advertisements", null, Moderator_UnclaimedAds_Tab, "View advertisements without an assigned moderator.");
+        Moderator_UnclaimedAds_Tab.getAccessibleContext().setAccessibleName("");
+
+        Moderator_MyAds_Tab.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+
+        Moderator_Edit_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Edit_Button.setText("Edit");
+        Moderator_Edit_Button.setToolTipText("Edit the currently highlighted advertisement.");
+
+        Moderator_Delete_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Moderator_Delete_Button.setText("Delete");
+        Moderator_Delete_Button.setToolTipText("Delete the currently highlighted advertisement.");
+
+        Moderator_MyAdsResults_Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Title", "Description", "Price", "Status", "Date"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        Moderator_MyAdsResults_Table.getTableHeader().setReorderingAllowed(false);
+        Moderator_MyAdsResults_Container.setViewportView(Moderator_MyAdsResults_Table);
+
+        javax.swing.GroupLayout Moderator_MyAds_TabLayout = new javax.swing.GroupLayout(Moderator_MyAds_Tab);
+        Moderator_MyAds_Tab.setLayout(Moderator_MyAds_TabLayout);
+        Moderator_MyAds_TabLayout.setHorizontalGroup(
+            Moderator_MyAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Moderator_MyAds_TabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Moderator_MyAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Moderator_MyAdsResults_Container, javax.swing.GroupLayout.DEFAULT_SIZE, 619, Short.MAX_VALUE)
+                    .addGroup(Moderator_MyAds_TabLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Moderator_Edit_Button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Moderator_Delete_Button)))
+                .addContainerGap())
+        );
+        Moderator_MyAds_TabLayout.setVerticalGroup(
+            Moderator_MyAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Moderator_MyAds_TabLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Moderator_MyAds_TabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Moderator_Delete_Button)
+                    .addComponent(Moderator_Edit_Button))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Moderator_MyAdsResults_Container, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        Moderator_Tab_Container.addTab("My Advertisements", null, Moderator_MyAds_Tab, "View advertisements assigned to you.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Ad_Title_Label)
-                    .addComponent(Ad_Details_Label)
-                    .addComponent(Ad_Category_Label)
-                    .addComponent(Ad_Price_Label))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Add_Advertisement_Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Ad_Price_Field)
-                    .addComponent(Ad_Category_ComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Ad_Details_Field_Container)
-                    .addComponent(Ad_Title_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(Moderator_Tab_Container)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ad_Title_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ad_Title_Label))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Ad_Details_Label)
-                    .addComponent(Ad_Details_Field_Container, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ad_Category_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ad_Category_Label))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ad_Price_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ad_Price_Label))
-                .addGap(18, 18, 18)
-                .addComponent(Add_Advertisement_Button)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(Moderator_Tab_Container, javax.swing.GroupLayout.PREFERRED_SIZE, 332, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        Moderator_Tab_Container.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -157,15 +278,22 @@ public class ModeratorScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> Ad_Category_ComboBox;
-    private javax.swing.JLabel Ad_Category_Label;
-    private javax.swing.JTextArea Ad_Details_Field;
-    private javax.swing.JScrollPane Ad_Details_Field_Container;
-    private javax.swing.JLabel Ad_Details_Label;
-    private javax.swing.JTextField Ad_Price_Field;
-    private javax.swing.JLabel Ad_Price_Label;
-    private javax.swing.JTextField Ad_Title_Field;
-    private javax.swing.JLabel Ad_Title_Label;
-    private javax.swing.JButton Add_Advertisement_Button;
+    private javax.swing.JComboBox<String> Moderator_Category_ComboBox;
+    private javax.swing.JLabel Moderator_Category_Label;
+    private javax.swing.JButton Moderator_ClaimAd_Button;
+    private javax.swing.JButton Moderator_Delete_Button;
+    private javax.swing.JButton Moderator_Edit_Button;
+    private javax.swing.JScrollPane Moderator_MyAdsResults_Container;
+    private javax.swing.JTable Moderator_MyAdsResults_Table;
+    private javax.swing.JPanel Moderator_MyAds_Tab;
+    private javax.swing.JComboBox<String> Moderator_Period_ComboBox;
+    private javax.swing.JLabel Moderator_Period_Label;
+    private javax.swing.JTextField Moderator_SearchString_Field;
+    private javax.swing.JLabel Moderator_SearchString_Label;
+    private javax.swing.JButton Moderator_Search_Button;
+    private javax.swing.JTabbedPane Moderator_Tab_Container;
+    private javax.swing.JScrollPane Moderator_UnclaimedAdsResults_Container;
+    private javax.swing.JTable Moderator_UnclaimedAdsResults_Table;
+    private javax.swing.JPanel Moderator_UnclaimedAds_Tab;
     // End of variables declaration//GEN-END:variables
 }
