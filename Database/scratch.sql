@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS Categories (
 
 CREATE TABLE IF NOT EXISTS Advertisements (
   advertisementID SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  advertisementTitle VARCHAR(20) NOT NULL,
+  advertisementTitle TEXT NOT NULL,
   advertisementDetails TEXT NOT NULL,
   advertisementDateTime DATETIME NOT NULL,
   price FLOAT(10,2) NOT NULL,
@@ -63,8 +63,8 @@ VALUES ('jsmith','John','Smith'),('ajackson','Ann','Jackson'),
 
 /* moderator data */
 INSERT INTO Moderators (userID)
-VALUES (SELECT userID FROM Users WHERE userID='jsmith'),
-  (SELECT userID FROM Users WHERE userID='ajackson');
+VALUES ((SELECT userID FROM Users WHERE userID='jsmith')),
+  ((SELECT userID FROM Users WHERE userID='ajackson'));
 
 /* status data */
 INSERT INTO Statuses (statusID, statusName)
@@ -79,28 +79,28 @@ VALUES ('CAT','Cars and Trucks'),('HOU','Housing'),('ELC','Electronics'),
 INSERT INTO Advertisements (advertisementTitle, advertisementDetails, advertisementDateTime,
   price, categoryID, userID, moderatorID, statusID)
 VALUES ('2010 Sedan Subaru','2010 sedan car in great chape for sale','2017-02-10','6000',
-  (SELECT categoryID FROM Categories WHERE categoryName = 'CAT'),
+  (SELECT categoryID FROM Categories WHERE categoryID = 'CAT'),
   (SELECT userID FROM Users WHERE userID = 'rkale'),
-  (SELECT moderatorID FROM Moderators WHERE userID = 'jsmith'),
+  (SELECT userID FROM Moderators WHERE userID = 'jsmith'),
   (SELECT statusID FROM Statuses WHERE statusName = 'Active')),
 ('Nice Office Desk','Nice office desk for sale','2017-02-15','50.25',
-  (SELECT categoryID FROM Categories WHERE categoryName = 'HOU'),
+  (SELECT categoryID FROM Categories WHERE categoryID = 'HOU'),
   (SELECT userID FROM Users WHERE userID = 'rkale'),
-  (SELECT moderatorID FROM Moderators WHERE userID = 'jsmith'),
+  (SELECT userID FROM Moderators WHERE userID = 'jsmith'),
   (SELECT statusID FROM Statuses WHERE statusName = 'Active')),
 ('Smart LG TV for $200 ONLY','Smart LG TV 52 inches! Really cheap!','2017-03-15','200',
-  (SELECT categoryID FROM Categories WHERE categoryName = 'ELC'),
+  (SELECT categoryID FROM Categories WHERE categoryID = 'ELC'),
   (SELECT userID FROM Users WHERE userID = 'sali'),
-  (SELECT moderatorID FROM Moderators WHERE userID = 'jsmith'),
+  (SELECT userID FROM Moderators WHERE userID = 'jsmith'),
   (SELECT statusID FROM Statuses WHERE statusName = 'Active')),
 ('HD Tablet for $25 only','Amazon Fire Tablet HD','2017-03-20','25',
-  (SELECT categoryID FROM Categories WHERE categoryName = 'ELC'),
+  (SELECT categoryID FROM Categories WHERE categoryID = 'ELC'),
   (SELECT userID FROM Users WHERE userID = 'rkale'),
-  (SELECT moderatorID FROM Moderators WHERE userID = NULL),
+  (SELECT userID FROM Moderators WHERE userID = NULL),
   (SELECT statusID FROM Statuses WHERE statusName = 'Pending')),
 ('Laptop for $100','Amazing HP laptop for $100','2017-03-20','100',
-  (SELECT categoryID FROM Categories WHERE categoryName = 'ELC'),
+  (SELECT categoryID FROM Categories WHERE categoryID = 'ELC'),
   (SELECT userID FROM Users WHERE userID = 'rkale'),
-  (SELECT moderatorID FROM Moderators WHERE userID = NULL),
+  (SELECT userID FROM Moderators WHERE userID = NULL),
   (SELECT statusID FROM Statuses WHERE statusName = 'Pending'));
 /* end data population */

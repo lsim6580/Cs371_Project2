@@ -172,7 +172,9 @@ public class UserApplication extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        User_MyAdsResults_Table.setColumnSelectionAllowed(true);
         User_MyAdsResults_Container.setViewportView(User_MyAdsResults_Table);
+        User_MyAdsResults_Table.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout User_MyAds_TabLayout = new javax.swing.GroupLayout(User_MyAds_Tab);
         User_MyAds_Tab.setLayout(User_MyAds_TabLayout);

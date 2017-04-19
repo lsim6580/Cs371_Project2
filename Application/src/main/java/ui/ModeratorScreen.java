@@ -99,8 +99,10 @@ public class ModeratorScreen extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        Moderator_UnclaimedAdsResults_Table.setColumnSelectionAllowed(true);
         Moderator_UnclaimedAdsResults_Table.getTableHeader().setReorderingAllowed(false);
         Moderator_UnclaimedAdsResults_Container.setViewportView(Moderator_UnclaimedAdsResults_Table);
+        Moderator_UnclaimedAdsResults_Table.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout Moderator_UnclaimedAds_TabLayout = new javax.swing.GroupLayout(Moderator_UnclaimedAds_Tab);
         Moderator_UnclaimedAds_Tab.setLayout(Moderator_UnclaimedAds_TabLayout);
@@ -183,8 +185,10 @@ public class ModeratorScreen extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        Moderator_MyAdsResults_Table.setColumnSelectionAllowed(true);
         Moderator_MyAdsResults_Table.getTableHeader().setReorderingAllowed(false);
         Moderator_MyAdsResults_Container.setViewportView(Moderator_MyAdsResults_Table);
+        Moderator_MyAdsResults_Table.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
 
         javax.swing.GroupLayout Moderator_MyAds_TabLayout = new javax.swing.GroupLayout(Moderator_MyAds_Tab);
         Moderator_MyAds_Tab.setLayout(Moderator_MyAds_TabLayout);
