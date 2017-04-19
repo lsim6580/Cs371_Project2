@@ -53,7 +53,6 @@ public class ModeratorScreen extends javax.swing.JFrame {
         Moderator_Tab_Container.setName("Moderator_Tab_Container"); // NOI18N
 
         Moderator_UnclaimedAds_Tab.setToolTipText("");
-        Moderator_UnclaimedAds_Tab.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         Moderator_Category_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Moderator_Category_Label.setLabelFor(Moderator_Category_ComboBox);
@@ -100,10 +99,8 @@ public class ModeratorScreen extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        Moderator_UnclaimedAdsResults_Table.setColumnSelectionAllowed(true);
         Moderator_UnclaimedAdsResults_Table.getTableHeader().setReorderingAllowed(false);
         Moderator_UnclaimedAdsResults_Container.setViewportView(Moderator_UnclaimedAdsResults_Table);
-        Moderator_UnclaimedAdsResults_Table.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         javax.swing.GroupLayout Moderator_UnclaimedAds_TabLayout = new javax.swing.GroupLayout(Moderator_UnclaimedAds_Tab);
         Moderator_UnclaimedAds_Tab.setLayout(Moderator_UnclaimedAds_TabLayout);
@@ -161,8 +158,6 @@ public class ModeratorScreen extends javax.swing.JFrame {
 
         Moderator_Tab_Container.addTab("Unclaimed Advertisements", null, Moderator_UnclaimedAds_Tab, "View advertisements without an assigned moderator.");
         Moderator_UnclaimedAds_Tab.getAccessibleContext().setAccessibleName("");
-
-        Moderator_MyAds_Tab.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
         Moderator_Edit_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         Moderator_Edit_Button.setText("Edit");

@@ -27,98 +27,100 @@ public class AddAdvertisement extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Ad_Category_ComboBox = new javax.swing.JComboBox<>();
-        Ad_Category_Label = new javax.swing.JLabel();
-        Add_Advertisement_Button = new javax.swing.JButton();
-        Ad_Details_Field_Container = new javax.swing.JScrollPane();
-        Ad_Details_Field = new javax.swing.JTextArea();
-        Ad_Details_Label = new javax.swing.JLabel();
-        Ad_Title_Field = new javax.swing.JTextField();
-        Ad_Price_Field = new javax.swing.JTextField();
-        Ad_Price_Field_Label = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        Add_Title_Label = new javax.swing.JLabel();
+        Add_Title_Field = new javax.swing.JTextField();
+        Add_Details_Label = new javax.swing.JLabel();
+        Add_Details_Container = new javax.swing.JScrollPane();
+        Add_Details_Field = new javax.swing.JTextArea();
+        Add_Category_Label = new javax.swing.JLabel();
+        Add_Category_ComboBox = new javax.swing.JComboBox<>();
+        Add_Price_Label = new javax.swing.JLabel();
+        Add_Price_Field = new javax.swing.JTextField();
+        Add_Add_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Add Advertisement");
 
-        Ad_Category_ComboBox.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Add_Title_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Add_Title_Label.setLabelFor(Add_Title_Field);
+        Add_Title_Label.setText("Title:");
 
-        Ad_Category_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Ad_Category_Label.setLabelFor(Ad_Category_ComboBox);
-        Ad_Category_Label.setText("Category:");
-        Ad_Category_Label.setToolTipText("");
+        Add_Title_Field.setToolTipText("Enter a descriptive title for the item.");
 
-        Add_Advertisement_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Add_Advertisement_Button.setText("Add Advertisement");
+        Add_Details_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Add_Details_Label.setLabelFor(Add_Details_Field);
+        Add_Details_Label.setText("Details:");
 
-        Ad_Details_Field_Container.setToolTipText("");
+        Add_Details_Container.setToolTipText("");
 
-        Ad_Details_Field.setColumns(20);
-        Ad_Details_Field.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
-        Ad_Details_Field.setRows(5);
-        Ad_Details_Field.setTabSize(1);
-        Ad_Details_Field.setToolTipText("Enter details about the item.");
-        Ad_Details_Field_Container.setViewportView(Ad_Details_Field);
+        Add_Details_Field.setColumns(20);
+        Add_Details_Field.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        Add_Details_Field.setLineWrap(true);
+        Add_Details_Field.setRows(5);
+        Add_Details_Field.setTabSize(1);
+        Add_Details_Field.setToolTipText("Enter details about the item.");
+        Add_Details_Field.setWrapStyleWord(true);
+        Add_Details_Container.setViewportView(Add_Details_Field);
 
-        Ad_Details_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Ad_Details_Label.setLabelFor(Ad_Details_Field_Container);
-        Ad_Details_Label.setText("Details:");
+        Add_Category_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Add_Category_Label.setLabelFor(Add_Category_ComboBox);
+        Add_Category_Label.setText("Category:");
+        Add_Category_Label.setToolTipText("");
 
-        Ad_Title_Field.setToolTipText("Enter a descriptive title for the item.");
+        Add_Category_ComboBox.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
 
-        Ad_Price_Field.setToolTipText("Enter the item's price.");
+        Add_Price_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Add_Price_Label.setLabelFor(Add_Price_Field);
+        Add_Price_Label.setText("Price:");
 
-        Ad_Price_Field_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Ad_Price_Field_Label.setLabelFor(Ad_Price_Field);
-        Ad_Price_Field_Label.setText("Price:");
+        Add_Price_Field.setToolTipText("Enter the item's price.");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setLabelFor(Ad_Title_Field);
-        jLabel1.setText("Title:");
+        Add_Add_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Add_Add_Button.setText("Add Advertisement");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(Add_Advertisement_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Add_Add_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Ad_Category_Label)
-                            .addComponent(Ad_Details_Label)
-                            .addComponent(Ad_Price_Field_Label)
-                            .addComponent(jLabel1))
+                            .addComponent(Add_Category_Label)
+                            .addComponent(Add_Details_Label)
+                            .addComponent(Add_Price_Label)
+                            .addComponent(Add_Title_Label))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(Ad_Price_Field)
-                            .addComponent(Ad_Title_Field)
-                            .addComponent(Ad_Details_Field_Container)
-                            .addComponent(Ad_Category_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(47, Short.MAX_VALUE))
+                            .addComponent(Add_Price_Field)
+                            .addComponent(Add_Title_Field)
+                            .addComponent(Add_Details_Container)
+                            .addComponent(Add_Category_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ad_Title_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(Add_Title_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Add_Title_Label))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Ad_Details_Field_Container, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ad_Details_Label))
+                    .addComponent(Add_Details_Container, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Add_Details_Label))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ad_Category_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ad_Category_Label))
+                    .addComponent(Add_Category_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Add_Category_Label))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Ad_Price_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Ad_Price_Field_Label))
+                    .addComponent(Add_Price_Field, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Add_Price_Label))
                 .addGap(18, 18, 18)
-                .addComponent(Add_Advertisement_Button)
+                .addComponent(Add_Add_Button)
                 .addGap(30, 30, 30))
         );
 
@@ -168,15 +170,15 @@ public class AddAdvertisement extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> Ad_Category_ComboBox;
-    private javax.swing.JLabel Ad_Category_Label;
-    private javax.swing.JTextArea Ad_Details_Field;
-    private javax.swing.JScrollPane Ad_Details_Field_Container;
-    private javax.swing.JLabel Ad_Details_Label;
-    private javax.swing.JTextField Ad_Price_Field;
-    private javax.swing.JLabel Ad_Price_Field_Label;
-    private javax.swing.JTextField Ad_Title_Field;
-    private javax.swing.JButton Add_Advertisement_Button;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton Add_Add_Button;
+    private javax.swing.JComboBox<String> Add_Category_ComboBox;
+    private javax.swing.JLabel Add_Category_Label;
+    private javax.swing.JScrollPane Add_Details_Container;
+    private javax.swing.JTextArea Add_Details_Field;
+    private javax.swing.JLabel Add_Details_Label;
+    private javax.swing.JTextField Add_Price_Field;
+    private javax.swing.JLabel Add_Price_Label;
+    private javax.swing.JTextField Add_Title_Field;
+    private javax.swing.JLabel Add_Title_Label;
     // End of variables declaration//GEN-END:variables
 }

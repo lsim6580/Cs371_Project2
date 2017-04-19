@@ -28,20 +28,20 @@
               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                      <Component id="Login_Button" min="-2" pref="163" max="-2" attributes="0"/>
+                      <Component id="Login_Login_Button" min="-2" pref="163" max="-2" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="Username_Label" min="-2" max="-2" attributes="0"/>
-                              <Component id="UserType_Label" min="-2" max="-2" attributes="0"/>
+                              <Component id="Login_Username_Label" min="-2" max="-2" attributes="0"/>
+                              <Component id="Login_UserType_Label" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="Username_Field" max="32767" attributes="0"/>
-                              <Component id="UserType_ComboBox" pref="163" max="32767" attributes="0"/>
+                              <Component id="Login_Username_Field" max="32767" attributes="0"/>
+                              <Component id="Login_UserType_ComboBox" pref="163" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
-                  <Component id="AdManager_Title" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="Login_AdManager_Title" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="70" max="32767" attributes="0"/>
           </Group>
@@ -51,59 +51,26 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="AdManager_Title" min="-2" max="-2" attributes="0"/>
+              <Component id="Login_AdManager_Title" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Username_Label" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                  <Component id="Username_Field" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="Login_Username_Label" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                  <Component id="Login_Username_Field" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="UserType_Label" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                  <Component id="UserType_ComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Login_UserType_Label" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Component id="Login_UserType_ComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="Login_Button" min="-2" max="-2" attributes="0"/>
+              <Component id="Login_Login_Button" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="51" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="Username_Field">
-    </Component>
-    <Component class="javax.swing.JLabel" name="Username_Label">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="1"/>
-        </Property>
-        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="Username_Field"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Username:"/>
-        <Property name="autoscrolls" type="boolean" value="true"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="UserType_Label">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="1"/>
-        </Property>
-        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-          <ComponentRef name="UserType_ComboBox"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Type:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="Login_Button">
-      <Properties>
-        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Tahoma" size="11" style="1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Login"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JLabel" name="AdManager_Title">
+    <Component class="javax.swing.JLabel" name="Login_AdManager_Title">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="24" style="1"/>
@@ -111,7 +78,32 @@
         <Property name="text" type="java.lang.String" value="SimWolf Ad Manager"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JComboBox" name="UserType_ComboBox">
+    <Component class="javax.swing.JLabel" name="Login_Username_Label">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="Login_Username_Field"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Username:"/>
+        <Property name="autoscrolls" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="Login_Username_Field">
+    </Component>
+    <Component class="javax.swing.JLabel" name="Login_UserType_Label">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+          <ComponentRef name="Login_UserType_ComboBox"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Type:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="Login_UserType_ComboBox">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tahoma" size="11" style="1"/>
@@ -126,6 +118,14 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="Login_Login_Button">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Login"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

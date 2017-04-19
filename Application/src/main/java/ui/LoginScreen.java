@@ -27,33 +27,33 @@ public class LoginScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Username_Field = new javax.swing.JTextField();
-        Username_Label = new javax.swing.JLabel();
-        UserType_Label = new javax.swing.JLabel();
-        Login_Button = new javax.swing.JButton();
-        AdManager_Title = new javax.swing.JLabel();
-        UserType_ComboBox = new javax.swing.JComboBox<>();
+        Login_AdManager_Title = new javax.swing.JLabel();
+        Login_Username_Label = new javax.swing.JLabel();
+        Login_Username_Field = new javax.swing.JTextField();
+        Login_UserType_Label = new javax.swing.JLabel();
+        Login_UserType_ComboBox = new javax.swing.JComboBox<>();
+        Login_Login_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
-        Username_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Username_Label.setLabelFor(Username_Field);
-        Username_Label.setText("Username:");
-        Username_Label.setAutoscrolls(true);
+        Login_AdManager_Title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        Login_AdManager_Title.setText("SimWolf Ad Manager");
 
-        UserType_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        UserType_Label.setLabelFor(UserType_ComboBox);
-        UserType_Label.setText("Type:");
+        Login_Username_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Login_Username_Label.setLabelFor(Login_Username_Field);
+        Login_Username_Label.setText("Username:");
+        Login_Username_Label.setAutoscrolls(true);
 
-        Login_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        Login_Button.setText("Login");
+        Login_UserType_Label.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Login_UserType_Label.setLabelFor(Login_UserType_ComboBox);
+        Login_UserType_Label.setText("Type:");
 
-        AdManager_Title.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        AdManager_Title.setText("SimWolf Ad Manager");
+        Login_UserType_ComboBox.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Login_UserType_ComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Moderator" }));
 
-        UserType_ComboBox.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        UserType_ComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Moderator" }));
+        Login_Login_Button.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        Login_Login_Button.setText("Login");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,33 +63,33 @@ public class LoginScreen extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Login_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Login_Login_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(Username_Label)
-                                .addComponent(UserType_Label))
+                                .addComponent(Login_Username_Label)
+                                .addComponent(Login_UserType_Label))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(Username_Field)
-                                .addComponent(UserType_ComboBox, 0, 163, Short.MAX_VALUE))))
-                    .addComponent(AdManager_Title))
+                                .addComponent(Login_Username_Field)
+                                .addComponent(Login_UserType_ComboBox, 0, 163, Short.MAX_VALUE))))
+                    .addComponent(Login_AdManager_Title))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(AdManager_Title)
+                .addComponent(Login_AdManager_Title)
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Username_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Username_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Login_Username_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Login_Username_Field, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(UserType_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(UserType_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Login_UserType_Label, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Login_UserType_ComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(Login_Button)
+                .addComponent(Login_Login_Button)
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
@@ -132,11 +132,11 @@ public class LoginScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel AdManager_Title;
-    private javax.swing.JButton Login_Button;
-    private javax.swing.JComboBox<String> UserType_ComboBox;
-    private javax.swing.JLabel UserType_Label;
-    private javax.swing.JTextField Username_Field;
-    private javax.swing.JLabel Username_Label;
+    private javax.swing.JLabel Login_AdManager_Title;
+    private javax.swing.JButton Login_Login_Button;
+    private javax.swing.JComboBox<String> Login_UserType_ComboBox;
+    private javax.swing.JLabel Login_UserType_Label;
+    private javax.swing.JTextField Login_Username_Field;
+    private javax.swing.JLabel Login_Username_Label;
     // End of variables declaration//GEN-END:variables
 }
